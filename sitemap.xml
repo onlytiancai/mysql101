@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2024/12/13/hello-world/</loc>
+    <loc>https://mysql101.com/mysql-tutorial/2024/12/13/hello-world/</loc>
     
     <lastmod>2024-12-13</lastmod>
     
@@ -12,8 +12,8 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
-    <lastmod>2024-12-13</lastmod>
+    <loc>https://mysql101.com/</loc>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

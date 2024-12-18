@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>MySQL 101</title>
+  <title>MySQL 101 - Beginner&#39;s Guide to Learning MySQL</title>
   
+  <subtitle>The ultimate guide to mastering MySQL, from basics to advanced techniques.</subtitle>
+  <link href="https://mysql101.com/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="https://mysql101.com/"/>
   <updated>2024-12-13T07:04:48.050Z</updated>
-  <id>http://example.com/</id>
+  <id>https://mysql101.com/</id>
   
   <author>
     <name>onlytiancai</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>001 MySQL 入门</title>
-    <link href="http://example.com/2024/12/13/hello-world/"/>
-    <id>http://example.com/2024/12/13/hello-world/</id>
+    <link href="https://mysql101.com/mysql-tutorial/2024/12/13/hello-world/"/>
+    <id>https://mysql101.com/mysql-tutorial/2024/12/13/hello-world/</id>
     <published>2024-12-13T07:04:48.050Z</published>
     <updated>2024-12-13T07:04:48.050Z</updated>
     
