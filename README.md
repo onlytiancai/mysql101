@@ -4,7 +4,7 @@ Welcome to MySQL 101!
 
 ### command
 
-    export PATH="/home/ubuntu/download/node-v12.22.12-linux-x64/bin:$PAT
+    export PATH="/home/ubuntu/download/node-v12.22.12-linux-x64/bin:$PATH"
     hexo clean && hexo deploy
 
 ### run gulp

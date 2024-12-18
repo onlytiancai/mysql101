@@ -3,18 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: MySQL 101 
-subtitle: ''
-description: ''
-keywords:
+title: MySQL 101 - Beginner's Guide to Learning MySQL
+subtitle: The ultimate guide to mastering MySQL, from basics to advanced techniques.
+description: A complete MySQL tutorial for beginners and professionals. Learn MySQL basics, advanced SQL queries, database design, and optimization techniques.
+keywords: MySQL tutorial, learn MySQL, SQL basics, database design, MySQL optimization, MySQL for beginners, SQL queries
 author: onlytiancai 
 language: en
 timezone: ''
 
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: https://mysql101.com
+
+permalink: /mysql-tutorial/:year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -127,3 +129,6 @@ markdown:
     permalinkSymbol: '¶'
     case: 0
     separator: '-'
+
+sitemap:
+  path: sitemap.xml
