@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mysql101.com/mysql-tutorial/2024/12/13/hello-world/</loc>
+    <loc>https://mysql101.com/mysql-tutorial/2024/12/17/hello-world/</loc>
     
-    <lastmod>2024-12-13</lastmod>
+    <lastmod>2024-12-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -19,6 +19,34 @@
   </url>
 
   
+  <url>
+    <loc>https://mysql101.com/tags/MySQL/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mysql101.com/tags/SQL/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://mysql101.com/tags/Database/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://mysql101.com/categories/Database-Tutorials/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

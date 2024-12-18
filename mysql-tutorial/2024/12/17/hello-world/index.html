@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 001 MySQL Hello World · MySQL 101 - Beginner's Guide to Learning MySQL</title><meta name="description" content="001 MySQL Hello World - onlytiancai"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://mysql101.com/atom.xml" title="MySQL 101 - Beginner's Guide to Learning MySQL"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="MySQL 101 - Beginner's Guide to Learning MySQL" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">001 MySQL Hello World</h1><div class="post-info">Dec 17, 2024</div><div class="post-content"><p>MySQL is a powerful relational database management system that uses SQL (Structured Query Language) to manage and query data. This guide focuses on the fundamental MySQL syntax, including how to create databases, design tables, and perform basic operations like inserting, querying, updating, and deleting data.</p>
+<span id="more"></span>
+<hr>
+<h2 id="1-Creating-a-Database"><a class="header-anchor" href="#1-Creating-a-Database">¶</a>1. <strong>Creating a Database</strong></h2>
+<p>To create a new database in MySQL, use the following command:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE my_database;</span><br></pre></td></tr></table></figure>
+<p>To select and start using the database:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE my_database;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-Creating-Tables"><a class="header-anchor" href="#2-Creating-Tables">¶</a>2. <strong>Creating Tables</strong></h2>
+<p>Tables are the core structures in a relational database. Here’s how to create a basic table:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> users (</span><br><span class="line">    id <span class="type">INT</span> AUTO_INCREMENT <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    name <span class="type">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    email <span class="type">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">UNIQUE</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    created_at <span class="type">TIMESTAMP</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="Explanation"><a class="header-anchor" href="#Explanation">¶</a>Explanation:</h3>
+<ul>
+<li><code>id</code>: A unique identifier with auto-increment.</li>
+<li><code>name</code>: Stores the user’s name, up to 100 characters.</li>
+<li><code>email</code>: Ensures emails are unique for each user.</li>
+<li><code>created_at</code>: Automatically stores the record’s creation time.</li>
+</ul>
+<hr>
+<h2 id="3-Inserting-Data"><a class="header-anchor" href="#3-Inserting-Data">¶</a>3. <strong>Inserting Data</strong></h2>
+<p>Add records to a table using the <code>INSERT INTO</code> command:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;alice@example.com&#x27;</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;bob@example.com&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-Querying-Data"><a class="header-anchor" href="#4-Querying-Data">¶</a>4. <strong>Querying Data</strong></h2>
+<p>Retrieve data from a table using the <code>SELECT</code> statement:</p>
+<h3 id="Select-All-Records"><a class="header-anchor" href="#Select-All-Records">¶</a>Select All Records:</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users;</span><br></pre></td></tr></table></figure>
+<h3 id="Select-Specific-Columns"><a class="header-anchor" href="#Select-Specific-Columns">¶</a>Select Specific Columns:</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name, email <span class="keyword">FROM</span> users;</span><br></pre></td></tr></table></figure>
+<h3 id="Adding-Conditions-with-WHERE"><a class="header-anchor" href="#Adding-Conditions-with-WHERE">¶</a>Adding Conditions with <code>WHERE</code>:</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;Alice&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="5-Updating-Data"><a class="header-anchor" href="#5-Updating-Data">¶</a>5. <strong>Updating Data</strong></h2>
+<p>Modify existing records in a table with the <code>UPDATE</code> command:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> users <span class="keyword">SET</span> email <span class="operator">=</span> <span class="string">&#x27;alice.new@example.com&#x27;</span> <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;Alice&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="6-Deleting-Data"><a class="header-anchor" href="#6-Deleting-Data">¶</a>6. <strong>Deleting Data</strong></h2>
+<p>Remove records from a table using the <code>DELETE</code> statement:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;Bob&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="7-Additional-SQL-Concepts"><a class="header-anchor" href="#7-Additional-SQL-Concepts">¶</a>7. <strong>Additional SQL Concepts</strong></h2>
+<h3 id="Sorting-Results-ORDER-BY"><a class="header-anchor" href="#Sorting-Results-ORDER-BY">¶</a>Sorting Results (<code>ORDER BY</code>):</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users <span class="keyword">ORDER</span> <span class="keyword">BY</span> created_at <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Filtering-Results-LIMIT"><a class="header-anchor" href="#Filtering-Results-LIMIT">¶</a>Filtering Results (<code>LIMIT</code>):</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users LIMIT <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Counting-Records"><a class="header-anchor" href="#Counting-Records">¶</a>Counting Records:</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> user_count <span class="keyword">FROM</span> users;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="8-Combining-Data-with-Joins"><a class="header-anchor" href="#8-Combining-Data-with-Joins">¶</a>8. <strong>Combining Data with Joins</strong></h2>
+<p>To retrieve data from multiple tables, use <code>JOIN</code>:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> users.name, orders.order_date</span><br><span class="line"><span class="keyword">FROM</span> users</span><br><span class="line"><span class="keyword">JOIN</span> orders <span class="keyword">ON</span> users.id <span class="operator">=</span> orders.user_id;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="9-Dropping-Databases-or-Tables"><a class="header-anchor" href="#9-Dropping-Databases-or-Tables">¶</a>9. <strong>Dropping Databases or Tables</strong></h2>
+<h3 id="Deleting-a-Table"><a class="header-anchor" href="#Deleting-a-Table">¶</a>Deleting a Table:</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> users;</span><br></pre></td></tr></table></figure>
+<h3 id="Deleting-a-Database"><a class="header-anchor" href="#Deleting-a-Database">¶</a>Deleting a Database:</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE my_database;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Conclusion"><a class="header-anchor" href="#Conclusion">¶</a>Conclusion</h2>
+<p>This guide covers the essential MySQL commands needed to start working with databases. By practicing these operations, you’ll develop a strong foundation in SQL and MySQL. Continue exploring advanced features like indexing, stored procedures, and query optimization to further enhance your database skills.</p>
+</div></article></div></main><footer><div class="paginator"></div><div class="copyright"><p>© 2024 <a href="https://mysql101.com">onlytiancai</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div></body></html>
