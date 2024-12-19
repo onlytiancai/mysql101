@@ -13,7 +13,7 @@
 
   <url>
     <loc>https://mysql101.com/</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,21 +21,21 @@
   
   <url>
     <loc>https://mysql101.com/tags/MySQL/</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://mysql101.com/tags/SQL/</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://mysql101.com/tags/Database/</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://mysql101.com/categories/Database-Tutorials/</loc>
-    <lastmod>2024-12-18</lastmod>
+    <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
