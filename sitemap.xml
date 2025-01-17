@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mysql101.com/mysql-tutorial/2025/01/09/Designing-a-Message-Queue-Using-MySQL/</loc>
+    
+    <lastmod>2025-01-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mysql101.com/mysql-tutorial/2025/01/09/Designing-a-Set-of-Tables-for-User-Login-in/</loc>
+    
+    <lastmod>2025-01-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mysql101.com/mysql-tutorial/2024/12/17/hello-world/</loc>
     
     <lastmod>2024-12-18</lastmod>
@@ -13,7 +31,7 @@
 
   <url>
     <loc>https://mysql101.com/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,21 +39,21 @@
   
   <url>
     <loc>https://mysql101.com/tags/MySQL/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://mysql101.com/tags/SQL/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://mysql101.com/tags/Database/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -44,7 +62,7 @@
   
   <url>
     <loc>https://mysql101.com/categories/Database-Tutorials/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
