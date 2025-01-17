@@ -7,6 +7,7 @@ tags:
 
 Message queues are a critical component of many distributed systems, enabling asynchronous communication between different services. While dedicated tools like RabbitMQ or Kafka are often used for this purpose, you can design a lightweight message queue using MySQL for simpler use cases. This blog will demonstrate how to design such a system, ensuring that both producers and consumers can work concurrently without losing or duplicating tasks.
 
+<!-- more -->
 ---
 
 #### 1. Key Features of the MySQL Message Queue
@@ -47,16 +48,10 @@ VALUES ('{"task": "process_file", "file_id": 123}');
 Consumers fetch tasks in the `PENDING` state and mark them as `PROCESSING` to prevent other consumers from picking the same task.
 
 ```sql
-UPDATE message_queue
-SET status = 'PROCESSING', updated_at = CURRENT_TIMESTAMP
-WHERE message_id = (
-    SELECT message_id FROM message_queue
-    WHERE status = 'PENDING'
-    ORDER BY created_at ASC
-    LIMIT 1
-    FOR UPDATE SKIP LOCKED
-)
-RETURNING *;
+begin; -- begin a transaction
+select message_id into @message_id from message_queue where status = 'PENDING' limit 1 for update skip locked; -- pick a pending task id.
+update message_queue set status='PROCESSING' where message_id=@message_id limit 1; -- update it to processing
+commit;
 ```
 
 **Explanation:**
@@ -124,16 +119,27 @@ DELETE FROM message_queue WHERE message_id IN (
 
 2. **Consumer fetches tasks**:
    ```sql
-   UPDATE message_queue
-   SET status = 'PROCESSING', updated_at = CURRENT_TIMESTAMP
-   WHERE message_id = (
-       SELECT message_id FROM message_queue
-       WHERE status = 'PENDING'
-       ORDER BY created_at ASC
-       LIMIT 1
-       FOR UPDATE SKIP LOCKED
-   )
-   RETURNING *;
+    mysql> begin;
+    Query OK, 0 rows affected (0.01 sec)
+
+    mysql> select message_id into @message_id from message_queue where status = 'PENDING' limit 1 for update skip locked;
+    Query OK, 1 row affected (0.00 sec)
+
+    mysql> select @message_id;
+    +-------------+
+    | @message_id |
+    +-------------+
+    |           1 |
+    +-------------+
+    1 row in set (0.00 sec)
+
+    mysql> update message_queue set status='PROCESSING' where message_id=@message_id limit 1;
+    Query OK, 1 row affected (0.04 sec)
+    Rows matched: 1  Changed: 1  Warnings: 0
+
+    mysql> commit;
+    Query OK, 0 rows affected (0.01 sec)
+
    ```
 
 3. **Consumer completes tasks**:

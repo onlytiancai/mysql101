@@ -6,6 +6,7 @@ tags:
 
 Designing a robust and scalable user login system is a critical component of many applications. In this blog, we’ll explore how to design a set of MySQL tables for managing user login functionality and important SQL queries to interact with these tables effectively.
 
+<!-- more -->
 ---
 
 #### 1. Key Components of the Database Design
